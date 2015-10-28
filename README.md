@@ -1,4 +1,4 @@
-# basicapp
+# Starter file (Modern Web App)
 A basic starter file of Modern Web App
 
 Steps:
