@@ -63,7 +63,7 @@ module.exports = function(grunt) {
         }
       },
 
-      // configure copy images from src to dist folder ------------------------------------
+      // configure copy images from src to dist folder ---------------------------
       copy: {
         images: {
           files: [
@@ -77,17 +77,10 @@ module.exports = function(grunt) {
         }
       },
 
+      // configure watch for chaanges in JS, CSS and Jade files -------------------
       watch: {
-        scripts: {
-          files: ['**/*.js', '**/*.less'],
-          tasks: ['jshint','uglify','less','cssmin'],
-          options: {
-            spawn: false,
-            livereload: {
-              host: 'localhost'
-            }
-          },
-        },
+        files: ['**/*.js','**/*.jade','**/*.less'],
+        tasks: ['jshint','uglify','jade','less','cssmin']
       }
 
     });
@@ -107,7 +100,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   // ============= // CREATE TASKS ========== //
-  grunt.registerTask('default', ['jshint', 'uglify', 'jade', 'less', 'cssmin', 'copy', 'watch']); 
-
+  grunt.registerTask('default', ['jshint', 'uglify', 'jade', 'less', 'cssmin', 'copy', 'watch']);
 
 };

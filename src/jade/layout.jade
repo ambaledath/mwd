@@ -8,5 +8,8 @@ html
     link(rel="shortcut icon" href="image/favicon.ico")
     link(rel="stylesheet" href="css/style.min.css")
   body
-    block content
+    include header.jade
+    section
+      block content
+    include footer.jade  
     script(src="js/script.min.js")
